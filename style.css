@@ -1,0 +1,94 @@
+*{
+    color: black;
+}
+
+body {
+    font-family: 'Poppins', 'Helvetica Neue';
+    background-color: #f5f5f5;
+    margin: 0;
+    
+  }
+
+  .container {
+    width: 300px;
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    text-align: center;
+  }
+  .journal{
+     background-image: linear-gradient(#9dbcf4 1px, transparent 1px);
+  background-size: 100% 25px;
+  }
+  .container h1 {
+    margin: 0;
+    font-size: 30px;
+  }
+  .vertical-line{
+    overflow: hidden !important;
+    height: 100%; 
+  width: 1px;
+  background-color: rgb(250, 95, 95);
+  position: fixed; 
+  left: 10%
+  
+  }
+
+  #date-picker {
+    background-color: transparent;
+    width: 220px;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    color: black;
+    padding: 15px 0 5px 0;
+  }
+  #date-picker::-webkit-calendar-picker-indicator {
+    cursor: pointer; 
+  } 
+  
+  #daily-text {
+    color: black;
+    background-color: rgba(250, 250, 250, 0.3);
+    width: 100%;
+    min-height: 300px;
+    padding-left: 40px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+    overflow-y: hidden;
+    font-size: 12px;
+    line-height: 25px;
+  }
+  .button{
+    text-align: center;
+  }
+  #download-btn{
+    display: inline-block;
+    padding-bottom: 8px;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+  }
+  #download-btn:hover{
+    scale: 1.05;
+    cursor: pointer;
+  }
+  textarea::placeholder{
+    color: black;
+  }
+  textarea:focus, input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  #save-status {
+    color: rgb(0, 255, 0);
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+  
+
+
+  

@@ -47,15 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     dailyText.addEventListener('input', () =>{
         dailyLogs[dateKey] = dailyText.value;
         localStorage.setItem('dailyLogs', JSON.stringify(dailyLogs));
-        // saveStatus.textContent = 'Last saved at ' + new Date().toLocaleTimeString();
+        
     });
-
-    // setInterval(() => {
-    //   dailyLogs[dateKey] = dailyText.value;
-    //   localStorage.setItem('dailyLogs', JSON.stringify(dailyLogs));
-    //   saveStatus.textContent = 'Last saved at ' + new Date().toLocaleTimeString();
-    // }, 5000); // 5 seconds
- 
     datePicker.addEventListener('change', () => {
       dailyLogs[dateKey] = dailyText.value;
       localStorage.setItem('dailyLogs', JSON.stringify(dailyLogs));

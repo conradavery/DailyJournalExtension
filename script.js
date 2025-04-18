@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
- 
     const datePicker = document.getElementById('date-picker');
     const dailyText = document.getElementById('daily-text');
     const saveStatus = document.getElementById('save-status');
@@ -21,8 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadDay(dKey) {
       dailyText.value = dailyLogs[dKey] || '';
     }
-    console.log(today);
+    console.log(today.getHours());
     loadDay(dateKey);
+    checkText();
+    function checkText(){
+      console.log(dailyText.value);
+      if(dailyText.value == ''){
+        chrome.runtime.sendMessage({ action: 'updateText', text: dailyText.value });
+      } else {
+        chrome.runtime.sendMessage({ action: 'updateText', text: "Not Empty" });
+      }
+    }
 
     const currMonth = today.getMonth();
     const currYear = today.getFullYear();
@@ -47,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     dailyText.addEventListener('input', () =>{
         dailyLogs[dateKey] = dailyText.value;
         localStorage.setItem('dailyLogs', JSON.stringify(dailyLogs));
-        
+        checkText();
     });
     datePicker.addEventListener('change', () => {
       dailyLogs[dateKey] = dailyText.value;
@@ -78,4 +86,3 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       
   });
-  

@@ -27,11 +27,22 @@ function changeBadge() {
         const savedText = data.dailyText || "";
 
         // Broader condition or debug log to test
-        if (now.getHours() >= 20 && savedText.trim() === '') {
-            chrome.action.setBadgeText({ text: "!"});
-            chrome.action.setBadgeBackgroundColor({ color: "#ff0808" });
-        } else {
-            chrome.action.setBadgeText({ text: "" });
+        if (savedText.trim() === '') {
+            let hours = now.getHours();
+            chrome.action.setBadgeText({ text: "✗"});
+            if(hours>=22){
+                chrome.action.setBadgeBackgroundColor({ color: "#ff3f3f" });
+            }
+            else if(hours>=18){
+                chrome.action.setBadgeBackgroundColor({color: "#FFFF00"})
+            }
+            else{
+                chrome.action.setBadgeText({text: ""});
+            }
+            }
+        else {
+            chrome.action.setBadgeText({ text: "✓" });
+            chrome.action.setBadgeBackgroundColor({color: "#16cb00"})
         }
     });
 }

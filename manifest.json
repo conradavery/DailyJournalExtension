@@ -1,7 +1,7 @@
 {
     "name": "Daily Journal Chrome Extension",
     "description": "A Chrome Extension to Keep Track of Daily Activites.",
-    "version": "2.2",
+    "version": "2.3",
     "manifest_version": 3,
     "permissions": ["alarms", "storage", "activeTab"],
     "action": {

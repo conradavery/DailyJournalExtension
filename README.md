@@ -14,11 +14,7 @@ The **Daily Journal Chrome Extension** is a simple yet powerful tool for maintai
 
 ## Installation
 
-1. Clone or download this repository.
-2. Open Google Chrome and navigate to `chrome://extensions`.
-3. Enable "Developer Mode" in the top-right corner.
-4. Click on "Load unpacked" and select the folder containing this project.
-5. The extension will be added to Chrome and can be accessed from the extensions menu.
+https://chromewebstore.google.com/detail/daily-journal-chrome-exte/hjmnhngmmakkihmiefjpjakaheghklbo
 
 ## Usage
 
